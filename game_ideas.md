@@ -9,7 +9,9 @@ Here are a collection of game ideas that I tinker with over the years.
 
 A 2-person board game that blends between tradition chess and capture-the-flag. The objective of the game is to move your units through various portals and capture your opponent's zone.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DY3OcfuWLh8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Board
 
@@ -54,7 +56,9 @@ The game uses speech as the sole way of communication - by having the player spe
 
 I focused on the original concept, design, and gameplay code.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/t-2w_q-RPyk" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Team members
 

@@ -21,7 +21,9 @@ In this project, I migrated several sets of landscape editing tools and enabled 
 
 I prototyped several VR typing schemes in the Unreal Engine.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_h1euVvZpvg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 **Time**:
 

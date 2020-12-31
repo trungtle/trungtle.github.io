@@ -20,7 +20,9 @@ Rendered with a personal rasterizer in Vulkan and glTF.
 
 [Battle Damaged Sci-fi Helmet - PBR](https://sketchfab.com/models/b81008d513954189a063ff901f7abfe4) by theblueturtle_, published under a Creative Commons Attribution-NonCommercial license
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mhXJXRPN3K4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <hr/>
 ## Vulkan Hybrid Ray-Raster
@@ -29,7 +31,9 @@ Rendered with a personal rasterizer in Vulkan and glTF.
 
 A renderer I built for my master thesis to experiment with hybrid rasterizer-raytracer rendering.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hqJjxkHS-l8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <hr/>
 ## WebGL deferred renderer
