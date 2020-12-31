@@ -20,15 +20,26 @@ author:
 title:            Trung Tuan Le
 email:            trungtuanle90@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-                  A personal website.
+                  Making rainbows 🌈
 url:              "http://wwww.trungtuanle.com" 
 baseurl:          /
 permalink:        pretty
 
 twitter_username: trungle90
 github_username:  trungtle
+
 github:
-  repo:           https://github.com/trungtle
+  repo:           https://github.com/trungtle/trungtle.github.io
+
+defaults:
+  - scope:
+      path:       "assets/images"
+    values:
+      image:      true
+  - scope:
+      path:       "assets/doc"
+    values:
+      doc:        true
 
 # Build settings
 markdown: kramdown

@@ -17,6 +17,11 @@
         `layout: page` in the front-matter. See readme for usage.
       {% endcomment %}
 
+      <a class="sidebar-nav-item" href="
+      {% link /assets/doc/Resume_TrungLe_2020.pdf %}">Resume</a>
+    </nav>
+
+    <nav class="sidebar-nav">
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
@@ -26,9 +31,6 @@
         {% endif %}
       {% endfor %}
 
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}/public/doc/Resume_TrungLe_2020.pdf">Resume</a>
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub</a>
-      <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
