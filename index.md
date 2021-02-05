@@ -6,7 +6,7 @@ title: Home
 <img width=128px src="{% link /assets/images/self_drawing.jpg %}" alt="self drawing" style="float: left; margin: 0px 15px 0px 0px;"> Hi there, I am a computer graphics / video games software engineer. Dabbler in rendering, ML, game design, and occasionally homebrewing table top stories ⚔️. 
 
 
-Previously, I worked on neural rendering research at Google [Stadia] R&D (https://stadia.dev/) and also AI performance for [Red Dead Redepmtion 2](https://www.rockstargames.com/reddeadredemption2/) at [Rockstar Games](https://www.rockstargames.com/).
+Previously, I worked on neural rendering research at Google [Stadia R&D](https://stadia.dev/) and also AI performance for [Red Dead Redepmtion 2](https://www.rockstargames.com/reddeadredemption2/) at [Rockstar Games](https://www.rockstargames.com/).
 
 You can browse the sidebar for some of the things I that have worked on.
 
