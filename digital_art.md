@@ -18,7 +18,7 @@ I doodle sometimes (not professonally). Follow me on [<i class="fab fa-instagram
 <div class="lightbox" id="lightbox{{ forloop.index }}">
   <div class="table">
     <div class="table-cell">
-	  <img src="{{site.baseurl}}assets/images/digital_art/{{item.image}}" alt="{{item.image}}" style="float: left; margin: 0px 20px 20px 0px; width: 100%">
+	  <img src="/assets/images/digital_art/{{item.image}}" alt="{{item.image}}" style="float: left; margin: 0px 20px 20px 0px; width: 100%">
     </div>
   </div>
 </div>
