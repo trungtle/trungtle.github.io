@@ -8,6 +8,8 @@ title: Home
 
 Previously, I worked on neural rendering research at Google [Stadia R&D](https://stadia.dev/) and also AI performance for [Red Dead Redepmtion 2](https://www.rockstargames.com/reddeadredemption2/) at [Rockstar Games](https://www.rockstargames.com/).
 
+I recently resleased the [SyntheticFur dataset](https://github.com/google-research-datasets/synthetic-fur) in collaboration with Google Brain and Stadia.
+
 You can browse the sidebar for some of the things I that have worked on.
 
 [<i class="fas fa-envelope fa-lg icon"></i>](mailto:trungtuanle90@gmail.com)
