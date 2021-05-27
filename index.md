@@ -16,7 +16,7 @@ You can browse the sidebar for some of the things I that have worked on.
 [<i class="fab fa-linkedin fa-lg icon"></i>](https://www.linkedin.com/in/trungtuanle/)
 [<i class="fab fa-github fa-lg icon"></i>](https://github.com/trungtle)
 [<i class="fab fa-twitter-square fa-lg icon"></i>](https://twitter.com/trungle90)
-[Resume <i class="fas fa-download fa-lg icon"></i>]({% link /assets/doc/Resume_TrungLe_2021.pdf %})
+[Resume <i class="fas fa-download fa-lg icon"></i>]({% link /assets/doc/Resume_TrungLe_May_2021.pdf %})
 
 
 <hr/>
@@ -26,7 +26,10 @@ You can browse the sidebar for some of the things I that have worked on.
 - **Software**: Unity, Unreal, Houdini, Blender, Tensorflow
 
 ## Work
-#### ML ENGINEER, GOOGLE STADIA - 2019 - PRESENT
+#### GRAPHICS ENGINEER, DEVIATION - MAY 2021 - Present
+TBA
+
+#### ML ENGINEER, GOOGLE STADIA - OCT 2019 - MAY 2021
 
 Advocated for and applied neural rendering research toward solving real-time graphics problems for video games. My focuses were AI art generation and high fidelity fur rendering. Worked on generating custom 3D datasets using Houdini and Blender, training generative machine learning models with Google infrastructure, parameter tuning, and interfacing novel workflows with artists. 
 
