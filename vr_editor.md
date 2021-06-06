@@ -5,17 +5,17 @@ title: 🏔️ Unreal VR Editor
 
 The folllowing are my work during an internship with Epic Games under the supervision of [Mike Fricker](https://twitter.com/mike_fricker)
 
-## [Foliage Painting (Unreal 4.13 release)](https://docs.unrealengine.com/latest/INT/Support/Builds/ReleaseNotes/2016/4_13/index.html)
+## [Foliage Painting (Unreal 4.13 release)](https://docs.unrealengine.com/4.26/en-US/WhatsNew/Builds/ReleaseNotes/2016/4_13/)
 
 I implemented foliage painting in VR mode by enabling the VR controllers to interact with the UI panels and project the foliage placing onto the virtual world. The "Foliage" painting mode can now be summoned from the UI panel. This feature is included in Unreal 4.13 release.
 
-<img src="https://docs.unrealengine.com/Images/WhatsNew/Builds/ReleaseNotes/2016/4_13/image_27.gif" alt="foliage painting">
+<img src="https://docs.unrealengine.com/4.26/Images/WhatsNew/Builds/ReleaseNotes/2016/4_13/image_27.gif" alt="foliage painting">
 
-## [Landscape Editing (Unreal 4.14 release)](https://docs.unrealengine.com/en-US/WhatsNew/Builds/ReleaseNotes/2016/4_14/index.html)
+## [Landscape Editing (Unreal 4.14 release)](https://docs.unrealengine.com/4.26/en-US/WhatsNew/Builds/ReleaseNotes/2016/4_14/)
 
 In this project, I migrated several sets of landscape editing tools and enabled it in VR mode. User can now summon the "Landscape" mode from the UI panel and select which brush they want to use for painting. It is quite trickier than the foliage painting mode, since there are a lot more tools to consider for reasonable controlling scheme. We had to drop tools that require hit proxies selection, such as ramp tool etc. This feature is included in Unreal 4.14 release.
 
-<img src="https://docs.unrealengine.com/Images/WhatsNew/Builds/ReleaseNotes/2016/4_14/image_49.gif" alt="Landscape editing">
+<img src="https://docs.unrealengine.com/4.26/Images/WhatsNew/Builds/ReleaseNotes/2016/4_14/image_49.gif" alt="Landscape editing">
 
 ## VR Keyboard
 

@@ -3,6 +3,7 @@ layout: page
 title: 🖌️ Digital Art
 
 images:
+  - image: Candlekeep_Adventurers.png
   - image: Spheres.png
   - image: Blink_Final.jpg
   - image: Kaiju_Cleanup.png
@@ -11,7 +12,7 @@ images:
   - image: Figure_Drawing.png
 ---
 
-I doodle sometimes (not professonally). Follow me on [<i class="fab fa-instagram fa-med"></i> @trung_sketchbook](https://www.instagram.com/trung_sketchbook/?hl=en).
+I doodle sometimes. Follow me on [<i class="fab fa-instagram fa-med"></i> @trung_sketchbook](https://www.instagram.com/trung_sketchbook/?hl=en).
 
 
 {% for item in page.images %}
