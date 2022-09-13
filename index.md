@@ -16,7 +16,7 @@ You can browse the sidebar for some of the things I that have worked on.
 [<i class="fab fa-linkedin fa-lg icon"></i>](https://www.linkedin.com/in/trungtuanle/)
 [<i class="fab fa-github fa-lg icon"></i>](https://github.com/trungtle)
 [<i class="fab fa-twitter-square fa-lg icon"></i>](https://twitter.com/trungle90)
-[Resume <i class="fas fa-download fa-lg icon"></i>]({%link/assets/doc/Resume_TrungLe.pdf%})
+[Resume <i class="fas fa-download fa-lg icon"></i>]({% link /assets/doc/Resume_TrungLe.pdf %})
 
 
 <hr/>
