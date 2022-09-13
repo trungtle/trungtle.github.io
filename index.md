@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<img width=128px src="{% link /assets/images/self_drawing.jpg %}" alt="self drawing" style="float: left; margin: 0px 15px 0px 0px;"> Hi there, I am a computer graphics / video games software engineer. Dabbler in rendering, ML, game design, and occasionally homebrewing table top stories ⚔️. 
+<img width=128px src="{% link /assets/images/self_drawing.jpg %}" alt="self drawing" style="float: left; margin: 0px 15px 0px 0px;"> Hi there, I am a computer graphics / video games software engineer at Deviation Games. Dabbler in rendering, ML, game design, and occasionally homebrewing table top stories ⚔️. 
 
 
 Previously, I worked on neural rendering research at Google [Stadia R&D](https://stadia.dev/) and also AI performance for [Red Dead Redepmtion 2](https://www.rockstargames.com/reddeadredemption2/) at [Rockstar Games](https://www.rockstargames.com/).
@@ -16,18 +16,19 @@ You can browse the sidebar for some of the things I that have worked on.
 [<i class="fab fa-linkedin fa-lg icon"></i>](https://www.linkedin.com/in/trungtuanle/)
 [<i class="fab fa-github fa-lg icon"></i>](https://github.com/trungtle)
 [<i class="fab fa-twitter-square fa-lg icon"></i>](https://twitter.com/trungle90)
-[Resume <i class="fas fa-download fa-lg icon"></i>]({% link /assets/doc/Resume_TrungLe_May_2021.pdf %})
+[Resume <i class="fas fa-download fa-lg icon"></i>]({%link/assets/doc/Resume_TrungLe.pdf%})
 
 
 <hr/>
 ## Tech
+- **Proficent Languages**: C/C++, GPU shader programming, Python, C#
+- **Secondary Languages**: Rust, Swift, Javascript
 - **Graphics**: Vulkan, WebGL, OpenGL
-- **Programming**: C/C++, Python, C#, Javascript
-- **Software**: Unity, Unreal, Houdini, Blender, Tensorflow
+- **Tools/API**: Unity, Unreal, Houdini, Blender, Tensorflow
 
 ## Work
 #### GRAPHICS ENGINEER, DEVIATION - MAY 2021 - Present
-TBA
+Designed and implemented real-time rendering features in Unreal for an unannounced AAA title. 
 
 #### ML ENGINEER, GOOGLE STADIA - OCT 2019 - MAY 2021
 
