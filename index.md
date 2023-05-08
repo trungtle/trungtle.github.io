@@ -21,14 +21,14 @@ You can browse the sidebar for some of the things I that have worked on.
 
 <hr/>
 ## Tech
-- **Proficent Languages**: C/C++, GPU shader programming, Python, C#
-- **Secondary Languages**: Rust, Swift, Javascript
-- **Graphics**: Vulkan, WebGL, OpenGL
-- **Tools/API**: Unity, Unreal, Houdini, Blender, Tensorflow
+- **Proficent Languages**: C/C++, GPU shader programming, C#
+- **Secondary Languages**: Python, Rust, Swift, Javascript
+- **Graphics**: Vulkan, DirectX 12, WebGL, OpenGL
+- **Tools/API**: Unity, Unreal, Houdini, Blender
 
 ## Work
 #### GRAPHICS ENGINEER, DEVIATION - MAY 2021 - Present
-Designed and implemented real-time rendering features in Unreal for an unannounced AAA title. 
+Designed and implemented real-time signed distance field ray marching in Unreal for an unannounced AAA title.
 
 #### ML ENGINEER, GOOGLE STADIA - OCT 2019 - MAY 2021
 
