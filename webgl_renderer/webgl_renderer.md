@@ -320,8 +320,8 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
     }
 
     vec3 Sky(Ray ray) {
-        float t = 0.5 * ray.direction.y + 1.0;
-        return (1.0 - t) * vec3(1,1,1) + t * NormalizeRGB(135, 206, 235);
+        float t = 0.5 * ray.direction.y + 0.3;
+        return (1.0 - t) * vec3(1,1,1) + t * NormalizeRGB(0, 191, 255);
     }
 
     HitResult RayMarch(Ray ray) {
@@ -360,8 +360,6 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
             } else {
 
                 vec3 L = normalize(vec3(light - result.hit));
-
-                
                 float shadow = 1.0;
 
                 vec3 albedo = NormalizeRGB(0, 255, 205);
@@ -387,7 +385,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
                 occ *= CalcAO(result.hit, N);
 
-                vec3 specular = pow(dot(reflect(L, N), ray.direction), 2.0) * vec3(0.4);
+                vec3 specular = pow(dot(reflect(L, N), ray.direction), 2.0) * vec3(0.4, 0.3, 0.2);
                 color = dot(N, L) * albedo * shadow + ambient * 0.1 + specular;
             }
         } else {
