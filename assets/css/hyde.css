@@ -36,12 +36,12 @@ html {
 }
 @media (min-width: 48em) {
   html {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 @media (min-width: 58em) {
   html {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 
@@ -90,12 +90,12 @@ a .icon {
   color: #fff;
   margin-top: 0;
   font-family: "Roboto Slab", serif;
-  font-size: 3.25rem;
+  font-size: 1.35rem;
 }
 
 /* Sidebar nav */
 .sidebar-nav {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .sidebar-nav-item {
   display: block;
@@ -110,6 +110,20 @@ a.sidebar-nav-item:focus {
   font-weight: bold;
 }
 
+.sidebar-nav-item-sub {
+  display: block;
+  line-height: 1.75;
+  font-size: 1.0rem;
+}
+a.sidebar-nav-item-sub:hover,
+a.sidebar-nav-item-sub:focus {
+  color: Mediumslateblue;
+  text-decoration: none;
+}
+.sidebar-nav-item-sub.active {
+  font-weight: bold;
+}
+
 /* Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
@@ -120,7 +134,7 @@ a.sidebar-nav-item:focus {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
-    bottom: 1rem;
+    top: 1rem;
     left:   1rem;
   }
 }
@@ -147,7 +161,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 64em) {
   .content {
-    margin-left: 22rem;
+    margin-left: 42rem;
     margin-right: 4rem;
   }
 }

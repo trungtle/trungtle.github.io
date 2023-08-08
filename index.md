@@ -3,14 +3,13 @@ layout: default
 title: Home
 ---
 
-<img width=128px src="{% link /assets/images/self_drawing.jpg %}" alt="self drawing" style="float: left; margin: 0px 15px 0px 0px;"> Hi there, I am a computer graphics / video games software engineer at Deviation Games. Dabbler in rendering, ML, game design, and occasionally homebrewing table top stories ⚔️. 
+<img width=58px src="{% link /assets/images/self_drawing.jpg %}" alt="self drawing" style="float: left; margin: 0px 15px 0px 0px;">
+My name is Trung Le. I'm a computer graphics engineer at Deviation Games, working on signed distance field rendering and dynamic GPU tessellation for an unannounced title.
 
+At Google [Stadia R&D](https://stadia.dev/) (shutdown in January, 2022), I worked on neural rendering research for fur rendering, and   released the [SyntheticFur dataset](https://github.com/google-research-datasets/synthetic-fur) in collaboration with Google Brain and Stadia. 
 
-Previously, I worked on neural rendering research at Google [Stadia R&D](https://stadia.dev/) and also AI performance for [Red Dead Redepmtion 2](https://www.rockstargames.com/reddeadredemption2/) at [Rockstar Games](https://www.rockstargames.com/).
+At [Rockstar Games](https://www.rockstargames.com/), I worked as an AI engineer to optimize physics and animation performance for [Red Dead Redepmtion 2](https://www.rockstargames.com/reddeadredemption2/).
 
-I recently resleased the [SyntheticFur dataset](https://github.com/google-research-datasets/synthetic-fur) in collaboration with Google Brain and Stadia.
-
-You can browse the sidebar for some of the things I that have worked on.
 
 [<i class="fas fa-envelope fa-lg icon"></i>](mailto:trungtuanle90@gmail.com)
 [<i class="fab fa-linkedin fa-lg icon"></i>](https://www.linkedin.com/in/trungtuanle/)
@@ -21,10 +20,10 @@ You can browse the sidebar for some of the things I that have worked on.
 
 <hr/>
 ## Tech
-- **Proficent Languages**: C/C++, GPU shader programming, C#
-- **Secondary Languages**: Python, Rust, Swift, Javascript
-- **Graphics**: Vulkan, DirectX 12, WebGL, OpenGL
-- **Tools/API**: Unity, Unreal, Houdini, Blender
+- **Proficient**: C/C++, GPU shader programming
+- **Secondary**: Python, Rust, C#, Swift, Javascript
+- **Graphics APIs**: Vulkan, WebGL, OpenGL
+- **Software**: Unity, Unreal, Houdini, Blender
 
 ## Work
 #### GRAPHICS ENGINEER, DEVIATION - MAY 2021 - Present
