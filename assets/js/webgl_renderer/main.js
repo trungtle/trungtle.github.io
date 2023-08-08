@@ -10,7 +10,7 @@ const eVismodes = Object.freeze({
 
 class Camera {
     constructor() {
-        this.origin = vec3.fromValues(0.0,0.0,5.0);
+        this.origin = vec3.fromValues(0.0,1.0,4.0);
         this.front = vec3.fromValues(0.0,0.0,-1.0);
         this.up = vec3.fromValues(0.0,1.0,0.0);
         this.matrix = mat4.create();
@@ -73,7 +73,7 @@ function update() {
     }
 
     // Update camera
-    mat4.lookAt(g_globals.camera.matrix, g_globals.camera.origin, g_globals.camera.front, g_globals.camera.up);
+    mat4.lookAt(g_globals.camera.matrix, g_globals.camera.origin, vec3.fromValues(0,0,0), g_globals.camera.up);
 }
 
 function render(ctx, shape) {
@@ -122,7 +122,8 @@ function render(ctx, shape) {
 
     // -- Init Canvas
     var canvas = document.createElement('canvas');
-    canvas.width = renderer.offsetWidth * 1.5;
+    var aspectRatio = 1.77;
+    canvas.width = renderer.offsetWidth * aspectRatio;
     canvas.height = renderer.offsetWidth;
     renderer.appendChild(canvas);
 
@@ -170,6 +171,10 @@ function render(ctx, shape) {
         vec3.scale(scaledCameraFront, g_globals.camera.front, cameraSpeed);
         var negScaledCameraFront = vec3.create();
         vec3.negate(negScaledCameraFront, scaledCameraFront);
+        var scaledCameraUp = vec3.create();
+        vec3.scale(scaledCameraUp, g_globals.camera.up, cameraSpeed);
+        var scaledCameraDown = vec3.create();
+        vec3.negate(scaledCameraDown, scaledCameraUp);
 
         switch (e.code) {
             case "ArrowRight":
@@ -179,9 +184,10 @@ function render(ctx, shape) {
                 vec3.add(g_globals.camera.origin, g_globals.camera.origin, negScaledCameraFront);
                 break;
             case "ArrowUp":
-                //g_globals.camera.origin += cameraSpeed * g_globals.camera.front;
+                vec3.add(g_globals.camera.origin, g_globals.camera.origin, scaledCameraUp);
                 break;
             case "ArrowDown":
+                vec3.add(g_globals.camera.origin, g_globals.camera.origin, scaledCameraDown);
                 break;
         } 
     }

@@ -3,7 +3,7 @@ layout: page
 title: WebGL renderer (WIP)
 ---
 
-**Dec 29, 2022**: Basic implementation of a raymarcher for signed distance field.
+Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
 <div class="renderer"></div>
 
@@ -38,7 +38,7 @@ title: WebGL renderer (WIP)
 
     #define MAX_DIST 500.0
     #define MIN_DIST 0
-    #define SURFACE_LEVEL 1e-5
+    #define SURFACE_LEVEL 1e-4
     #define MAX_RAYMARCH_STEPS 256
 
     uniform float u_time;
@@ -201,9 +201,14 @@ title: WebGL renderer (WIP)
         return length(max(q, 0.0)) + min(max(q.x, max(q.y, q.z)), 0.0);
     }
         
-    float opSmoothUnion(float d1, float d2, float k) {
-        float h = clamp( 0.5 + 0.5*(d2-d1)/k, 0.0, 1.0 );
-        return mix(d2, d1, h) - k*h*(1.0-h); 
+    Surface opSmoothUnion(Surface s1, Surface s2, float k) {
+        float h = clamp( 0.5 + 0.5*(s2.d-s1.d)/k, 0.0, 1.0 );
+        float d = mix(s2.d, s1.d, h) - k*h*(1.0-h); 
+        if (s1.d < s2.d) {
+            return Surface(d, s1.material);
+        } else {
+            return Surface(d, s2.material);
+        }
     }
 
     Surface opMin(Surface s1, Surface s2) {
@@ -222,17 +227,24 @@ title: WebGL renderer (WIP)
         mat4 ry = RotateY(u_time);
         mat4 rz = RotateZ(u_time);
         vec4 xformP = vec4(p, 1.0) * tx * rx;
-        Surface plane = Surface(sdSphere(p, vec3(0.0,-100.0,0.0), 100.0), 1);
+        Surface plane = Surface(sdSphere(p, vec3(0.0,-200.0,0.0), 200.0), 1);
         Surface e1 = Surface(sdEllipsoid(p, vec3(0.28,0.5,0.02)), 0);
         Surface b1 = Surface(sdBox(xformP.xyz, vec3(0.2, 1.0, 0.5)), 0);
+        mat4 txBackwall = Translate(vec3(0,0,2.0));
+        vec4 xformBackWall = vec4(p, 1.0) * txBackwall;
+        Surface backwall = Surface(sdBox(xformBackWall.xyz, vec3(2.2, 5.0, 0.5)), 0);
         Surface s1 = Surface(sdSphere(p, vec3(0.0,0.5,0.0), 0.5), 0);
+        Surface s2 = Surface(sdSphere(p, vec3(1.0,0.5,0.0), 0.2), 0);
+        Surface s3 = Surface(sdSphere(p, vec3(-1.0,0.5,0.0), 0.2), 0);
+        Surface s4 = Surface(sdSphere(p, vec3(0.0,0.5,0.5), 0.2), 0);
 
-        //Surface sur = plane;
-        Surface sur = opMin(s1, plane);
-        //sur = opMin(sur, s1);
+        Surface sur = plane;
 
-        //float l = sdSphere(p, u_lights[0], 0.1);
-        //d = min(d, l);
+        Surface torso = opSmoothUnion(s1, s2, 1.0);
+        torso = opSmoothUnion(torso, s3, 1.0);
+        torso = opSmoothUnion(torso, s4, 1.0);
+        sur = opMin(sur, torso);
+        // sur = opMin(sur, backwall);
 
         return sur;
     }
@@ -294,7 +306,7 @@ title: WebGL renderer (WIP)
         }
 
         res = clamp(res, 0.0, 1.0);
-        //res = res*res*(3.0 - 2.0*res);
+        res = res*res*(3.0 - 2.0*res);
 
         return res;
     }
@@ -375,7 +387,7 @@ title: WebGL renderer (WIP)
 
                 occ *= CalcAO(result.hit, N);
 
-                vec3 specular = pow(dot(reflect(L, N), -ray.direction), 10.0) * vec3(0.1);
+                vec3 specular = pow(dot(reflect(L, N), ray.direction), 2.0) * vec3(0.4);
                 color = dot(N, L) * albedo * shadow + ambient * 0.1 + specular;
             }
         } else {
@@ -385,7 +397,7 @@ title: WebGL renderer (WIP)
         return color;
     }
 
-    #define AA 3
+    #define AA 4
 
     void main()
     {
@@ -422,7 +434,7 @@ title: WebGL renderer (WIP)
                     totalColor += color;
                 }
             }            
-            color = totalColor / float(AA*AA);
+            color = totalColor / max(float(AA*AA), 1e-4);
             #else
             ray.direction = normalize(vec3(uv, -1.0));
             color = Render(ray);
