@@ -3,6 +3,10 @@ layout: page
 title: WebGL renderer (WIP)
 ---
 
+*Last updated Aug 8, 2023 (This is currently in progress)*
+
+Experimenting with raymarching SDF in WebGL. 
+
 Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
 <div class="renderer"></div>
