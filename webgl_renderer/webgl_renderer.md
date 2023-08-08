@@ -450,18 +450,18 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
 <canvas class="glsl-canvas" controls data-fragment-url="/webgl_renderer/shaders/main.frag" width="500" height="500" data-mode="flat"></canvas> -->
 
-<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/core/gl-matrix-min.js"></script>
+<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/core/gl-matrix-min.js"></script>
 
-<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/utility.js"></script>
+<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/utility.js"></script>
 
-<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/math/vec2f.js"></script>
+<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/math/vec2f.js"></script>
 
-<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/math/vec3f.js"></script>
+<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/math/vec3f.js"></script>
 
-<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/core/mesh2d.js"></script>
+<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/core/mesh2d.js"></script>
 
-<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/core/ray.js"></script>
+<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/core/ray.js"></script>
 
-<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/main.js"></script>
+<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/main.js"></script>
 
 <button onclick="onVisMode();">Change vis mode</button>
