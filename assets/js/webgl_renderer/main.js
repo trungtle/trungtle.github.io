@@ -1,3 +1,6 @@
+import sdf_vs from './shaders/sdf/sdf_vs.js';
+import sdf_ps from './shaders/sdf/sdf_ps.js';
+
 const {mat2, mat3, mat4, vec2, vec3, vec4} = glMatrix;
 
 // Visualization mode
@@ -14,7 +17,7 @@ class Camera {
         this.front = vec3.fromValues(0.0,0.0,-1.0);
         this.up = vec3.fromValues(0.0,1.0,0.0);
         this.matrix = mat4.create();
-    }    
+    }
 }
 
 
@@ -65,11 +68,11 @@ function update() {
         var mouseOffsetX = g_globals.mouse.X - g_globals.mouse.prevX;
         var mouseOffsetY = g_globals.mouse.prevY - g_globals.mouse.Y;
         g_globals.currentCamAngles[0] += radians(mouseOffsetX * g_globals.mouse.sensitivity);
-        g_globals.currentCamAngles[1] += radians(clamp(mouseOffsetY  * g_globals.mouse.sensitivity, -89.0, 89.0));    
+        g_globals.currentCamAngles[1] += radians(clamp(mouseOffsetY  * g_globals.mouse.sensitivity, -89.0, 89.0));
 
         g_globals.mouse.prevX = g_globals.mouse.X;
-        g_globals.mouse.prevY = g_globals.mouse.Y;    
-    
+        g_globals.mouse.prevY = g_globals.mouse.Y;
+
     }
 
     // Update camera
@@ -78,7 +81,7 @@ function update() {
 
 function render(ctx, shape) {
 
-    ctx.gl.viewport(0, 0, ctx.gl.canvas.width, ctx.gl.canvas.height);
+    ctx.gl.viewport(0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.gl.clearColor(0.5, 0.5, 0.8, 1.0);
     ctx.gl.clear(ctx.gl.COLOR_BUFFER_BIT | ctx.gl.DEPTH_BUFFER_BIT);
     uniform1f(ctx, unifLoc(ctx, "u_time"), g_globals.now);
@@ -112,7 +115,7 @@ function render(ctx, shape) {
         stats.showPanel(1);
         stats.domElement.style.cssText = 'position:relative;top:0px;left:0px;';
         renderer.appendChild(stats.dom);
-        requestAnimationFrame(function loop() { 
+        requestAnimationFrame(function loop() {
             stats.update();
             requestAnimationFrame(loop)});
         };
@@ -128,6 +131,9 @@ function render(ctx, shape) {
     renderer.appendChild(canvas);
 
     // -- User inputs
+    document.querySelector("#vismode").addEventListener('click', onVisMode);
+
+    // Slider
     var sliderContainer = document.createElement("div");
     renderer.appendChild(sliderContainer);
 
@@ -145,7 +151,7 @@ function render(ctx, shape) {
 
     canvas.addEventListener("mouseenter", function(  ) { g_globals.mouse.isMouseInsideCanvas=true;});
     canvas.addEventListener("mouseout", function(  ) { g_globals.mouse.isMouseInsideCanvas=false;});
-    
+
     onmousemove = function(e) {
         var rect = canvas.getBoundingClientRect(); // abs. size of element
         var scaleX = canvas.width / rect.width;    // relationship bitmap vs. element for x
@@ -155,11 +161,11 @@ function render(ctx, shape) {
 
         if (g_globals.mouse.firstMouse) {
             g_globals.mouse.prevX = mouseX;
-            g_globals.mouse.prevY = mouseY;    
+            g_globals.mouse.prevY = mouseY;
             g_globals.mouse.firstMouse = false;
         } else {
             g_globals.mouse.prevX = g_globals.mouse.X;
-            g_globals.mouse.prevY = g_globals.mouse.Y;    
+            g_globals.mouse.prevY = g_globals.mouse.Y;
         }
         g_globals.mouse.X = mouseX;
         g_globals.mouse.Y = mouseY;
@@ -189,7 +195,7 @@ function render(ctx, shape) {
             case "ArrowDown":
                 vec3.add(g_globals.camera.origin, g_globals.camera.origin, scaledCameraDown);
                 break;
-        } 
+        }
     }
 
     // -- Init WebGL Context
@@ -202,26 +208,50 @@ function render(ctx, shape) {
     }
 
     // -- Init Program
-    var program = createProgram(gl, getShaderSource('vs'), getShaderSource('fs'));
+    var program = createProgram(gl, sdf_vs, sdf_ps);
+    // var program = createProgram(gl, getShaderSource("vs-sdf"), getShaderSource("ps-sdf"));
+
+    // var texture = gl.createTexture();
+    // gl.bindTexture(gl.TEXTURE_2D, texture);
+
+    // // fill texture with 3x2 pixels
+    // const level = 0;
+    // const internalFormat = gl.LUMINANCE;
+    // const width = 3;
+    // const height = 2;
+    // const border = 0;
+    // const format = gl.LUMINANCE;
+    // const type = gl.UNSIGNED_BYTE;
+    // const data = new Uint8Array([
+    //     128,  64, 128,
+    //     0, 192,   0,
+    // ]);
+    // gl.texImage2D(gl.TEXTURE_2D, level, internalFormat, width, height, border, format, type, data);
+    // // set the filtering so we don't need mips and it's not filtered
+    // gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+    // gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+    // gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    // gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    // const alignment = 1;
+    // gl.pixelStorei(gl.UNPACK_ALIGNMENT, alignment);
 
     var ctx = {
         gl: gl,
         program: program,
         canvas: canvas
     };
-    
+
     drawScene();
 
-    function drawScene() {    
+    function drawScene() {
         gl.useProgram(program);
         var screen = new Rect2D(gl, 0, 0, canvas.width, canvas.height);
         update();
-        render(ctx, screen);     
+        render(ctx, screen);
         requestAnimationFrame(drawScene);
     }
-        
+
     // -- Delete WebGL resources
-    // tri.release(gl);
     // gl.deleteProgram(program);
-    
+
 })();

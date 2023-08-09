@@ -3,16 +3,16 @@ layout: page
 title: WebGL renderer (WIP)
 ---
 
-Experimenting with raymarching SDF in WebGL. 
+Experimenting with raymarching SDF in WebGL.
 
 Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
 <div class="renderer"></div>
 
-<script id="vs" type="x-shader/x-vertex">
+<script id="vs-sdf" type="x-shader/x-vertex">
     #version 300 es
     #define POSITION_LOCATION 0
-    
+
     precision highp float;
     precision highp int;
 
@@ -26,7 +26,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
     }
 </script>
 
-<script id="fs" type="x-shader/x-fragment">
+<script id="ps-sdf" type="x-shader/x-fragment">
     #version 300 es
     precision highp float;
     precision highp int;
@@ -118,16 +118,16 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
         );
     }
 
-    float rand(float co) { 
-        return fract(sin(co*(91.3458)) * 47453.5453); 
+    float rand(float co) {
+        return fract(sin(co*(91.3458)) * 47453.5453);
     }
 
-    float rand(vec2 co) { 
-        return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453); 
+    float rand(vec2 co) {
+        return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
     }
 
-    float rand(vec3 co){ 
-        return rand(co.xy+rand(co.z)); 
+    float rand(vec3 co){
+        return rand(co.xy+rand(co.z));
     }
 
     vec3 NormalizeRGB(vec3 RGB) {
@@ -153,7 +153,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
         // analytical integral (box filter)
         vec2 i = 2.0*(abs(fract((p-0.5*w)*0.5)-0.5)-abs(fract((p+0.5*w)*0.5)-0.5))/w;
         // xor pattern
-        return 0.5 - 0.5*i.x*i.y;                  
+        return 0.5 - 0.5*i.x*i.y;
     }
 
     // --- Ray --- //
@@ -164,7 +164,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
     };
 
     struct HitResult {
-        vec3 hit;       
+        vec3 hit;
         bool bHit;
         float d;
         int material;
@@ -183,7 +183,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
     // --- SDF functions --- //
     // https://iquilezles.org/articles/distfunctions/
-    float sdSphere(vec3 p, vec3 center, float r) {        
+    float sdSphere(vec3 p, vec3 center, float r) {
         return length(p - center) - r;
     }
 
@@ -202,10 +202,10 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
         vec3 q = abs(p) - b;
         return length(max(q, 0.0)) + min(max(q.x, max(q.y, q.z)), 0.0);
     }
-        
+
     Surface opSmoothUnion(Surface s1, Surface s2, float k) {
         float h = clamp( 0.5 + 0.5*(s2.d-s1.d)/k, 0.0, 1.0 );
-        float d = mix(s2.d, s1.d, h) - k*h*(1.0-h); 
+        float d = mix(s2.d, s1.d, h) - k*h*(1.0-h);
         if (s1.d < s2.d) {
             return Surface(d, s1.material);
         } else {
@@ -265,7 +265,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
         vec3 cd = normalize(lookAtPoint - cameraPos); // camera direction
         vec3 cr = normalize(cross(vec3(0, 1, 0), cd)); // camera right
         vec3 cu = normalize(cross(cd, cr)); // camera up
-        
+
         return mat3(-cr, cu, -cd); // negative signs can be turned positive (or vice versa) to flip coordinate space conventions
     }
 
@@ -281,7 +281,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
             occ += (hr-dd)*sca;
             sca *= 0.95;
         }
-        return clamp( 1.0 - 2.0*occ, 0.0, 1.0 );    
+        return clamp( 1.0 - 2.0*occ, 0.0, 1.0 );
     }
 
     float CalcShadow(in Ray ray) {
@@ -301,7 +301,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
             float y = (i==0) ? 0.0 : h*h/(2.0*ph);
             float d = sqrt(h * h - y * y);
-            res = min(res, k * d / max(0.0, t - y));            
+            res = min(res, k * d / max(0.0, t - y));
             ph = h;
 
             t += h;
@@ -315,9 +315,9 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
     vec3 CalcNormal(vec3 pos) {
         vec2 e = vec2(1.0,-1.0)*0.5*5e-3;
-        return normalize( e.xyy*MapD( pos + e.xyy ) + 
-                        e.yyx*MapD( pos + e.yyx ) + 
-                        e.yxy*MapD( pos + e.yxy ) + 
+        return normalize( e.xyy*MapD( pos + e.xyy ) +
+                        e.yyx*MapD( pos + e.yyx ) +
+                        e.yxy*MapD( pos + e.yxy ) +
                         e.xxx*MapD( pos + e.xxx ) );
     }
 
@@ -337,7 +337,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
             if (h < SURFACE_LEVEL || h > MAX_DIST) {
                 result.bHit = (h < SURFACE_LEVEL);
-                break; 
+                break;
             }
             result.hit = p;
             result.d = t;
@@ -433,7 +433,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
                     totalColor += color;
                 }
-            }            
+            }
             color = totalColor / max(float(AA*AA), 1e-4);
             #else
             ray.direction = normalize(vec3(uv, -1.0));
@@ -450,18 +450,13 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
 <canvas class="glsl-canvas" controls data-fragment-url="/webgl_renderer/shaders/main.frag" width="500" height="500" data-mode="flat"></canvas> -->
 
-<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/core/gl-matrix-min.js"></script>
+<button id="vismode">Change vis mode</button>
 
-<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/utility.js"></script>
+<script src="{{ site.url }}/assets/js/webgl_renderer/core/gl-matrix-min.js"></script>
+<script src="{{ site.url }}/assets/js/webgl_renderer/utility.js"></script>
+<script src="{{ site.url }}/assets/js/webgl_renderer/math/vec2f.js"></script>
+<script src="{{ site.url }}/assets/js/webgl_renderer/math/vec3f.js"></script>
+<script src="{{ site.url }}/assets/js/webgl_renderer/core/mesh2d.js"></script>
+<script src="{{ site.url }}/assets/js/webgl_renderer/core/ray.js"></script>
+<script src="{{ site.url }}/assets/js/webgl_renderer/main.js" type="module"></script>
 
-<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/math/vec2f.js"></script>
-
-<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/math/vec3f.js"></script>
-
-<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/core/mesh2d.js"></script>
-
-<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/core/ray.js"></script>
-
-<script src="https://www.trungtuanle.com/assets/js/webgl_renderer/main.js"></script>
-
-<button onclick="onVisMode();">Change vis mode</button>

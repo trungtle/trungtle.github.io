@@ -30,16 +30,17 @@ function uniform3f(ctx, loc, arr) {
 }
 
 function uniformMat2fv(ctx, loc, mat, bTranspose = false) {
-    ctx.gl.uniformMatrix2fv(loc, bTranspose, mat);  
+    ctx.gl.uniformMatrix2fv(loc, bTranspose, mat);
 }
 
 function uniformMat3fv(ctx, loc, mat, bTranspose = false) {
-    ctx.gl.uniformMatrix3fv(loc, bTranspose, mat);  
+    ctx.gl.uniformMatrix3fv(loc, bTranspose, mat);
 }
 
 function uniformMat4fv(ctx, loc, mat, bTranspose = false) {
     ctx.gl.uniformMatrix4fv(loc, bTranspose, mat);
 }
+
 
 (function () {
     'use strict';
