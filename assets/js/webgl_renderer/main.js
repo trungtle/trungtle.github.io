@@ -1,5 +1,5 @@
-import sdf_vs from './shaders/sdf/sdf_vs.js';
-import sdf_ps from './shaders/sdf/sdf_ps.js';
+// import sdf_vs from './shaders/sdf/sdf_vs.js';
+// import sdf_ps from './shaders/sdf/sdf_ps.js';
 
 const {mat2, mat3, mat4, vec2, vec3, vec4} = glMatrix;
 
@@ -208,8 +208,8 @@ function render(ctx, shape) {
     }
 
     // -- Init Program
-    var program = createProgram(gl, sdf_vs, sdf_ps);
-    // var program = createProgram(gl, getShaderSource("vs-sdf"), getShaderSource("ps-sdf"));
+    // var program = createProgram(gl, sdf_vs, sdf_ps);
+    var program = createProgram(gl, getShaderSource("vs-sdf"), getShaderSource("ps-sdf"));
 
     // var texture = gl.createTexture();
     // gl.bindTexture(gl.TEXTURE_2D, texture);

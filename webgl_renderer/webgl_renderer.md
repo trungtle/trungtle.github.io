@@ -452,11 +452,11 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
 
 <button id="vismode">Change vis mode</button>
 
-<script src="{{ site.url }}/assets/js/webgl_renderer/core/gl-matrix-min.js"></script>
-<script src="{{ site.url }}/assets/js/webgl_renderer/utility.js"></script>
-<script src="{{ site.url }}/assets/js/webgl_renderer/math/vec2f.js"></script>
-<script src="{{ site.url }}/assets/js/webgl_renderer/math/vec3f.js"></script>
-<script src="{{ site.url }}/assets/js/webgl_renderer/core/mesh2d.js"></script>
-<script src="{{ site.url }}/assets/js/webgl_renderer/core/ray.js"></script>
-<script src="{{ site.url }}/assets/js/webgl_renderer/main.js" type="module"></script>
+<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/core/gl-matrix-min.js"></script>
+<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/utility.js"></script>
+<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/math/vec2f.js"></script>
+<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/math/vec3f.js"></script>
+<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/core/mesh2d.js"></script>
+<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/core/ray.js"></script>
+<script src="{{ base.url | prepend: site.url }}/assets/js/webgl_renderer/main.js"></script>
 
