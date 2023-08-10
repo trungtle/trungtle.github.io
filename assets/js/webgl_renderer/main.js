@@ -17,6 +17,7 @@ class Camera {
         this.front = vec3.fromValues(0.0,0.0,-1.0);
         this.up = vec3.fromValues(0.0,1.0,0.0);
         this.matrix = mat4.create();
+        this.lookAt = vec3.fromValues(0.0,1.5,0.0);
     }
 }
 
@@ -93,6 +94,7 @@ function render(ctx, shape) {
     uniformMat4fv(ctx, unifLoc(ctx, "u_camera"), g_globals.camera.matrix);
     uniform3f(ctx, unifLoc(ctx, "u_cameraOrigin"), g_globals.camera.origin);
     uniform3f(ctx, unifLoc(ctx, "u_cameraFront"), g_globals.camera.front);
+    uniform3f(ctx, unifLoc(ctx, "u_cameraLookat"), g_globals.camera.lookAt);
     uniform3f(ctx, unifLoc(ctx, "u_translate"), g_globals.translate);
     uniform3fv(ctx, unifLoc(ctx, "u_lights"), [2.0,Math.sin(g_globals.now * 1e-10) + 2.0,2.0]);
     uniform1i(ctx, unifLoc(ctx, "u_visMode"), g_globals.vismode);
@@ -172,7 +174,7 @@ function render(ctx, shape) {
     }
 
     onkeydown = function(e) {
-        let cameraSpeed = 5.5 * g_globals.deltaFrame * 1e-3;
+        let cameraSpeed = 15.5 * g_globals.deltaFrame * 1e-3;
         var scaledCameraFront = vec3.create();
         vec3.scale(scaledCameraFront, g_globals.camera.front, cameraSpeed);
         var negScaledCameraFront = vec3.create();
