@@ -478,7 +478,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
                 vec3 L = normalize(vec3(light - result.hit));
                 float shadow = 1.0;
 
-                float fresnel = pow( max(0.0, 1.0+dot(N, V)), 2.0 );
+                float fresnel = pow( max(0.0, 1.00+dot(N, V)), 2.6 );
                 // Default material (id = 0)
                 vec3 albedo = NormalizeRGB(245,98,0);
                 vec3 ambient = NormalizeRGB(227, 211, 228);
@@ -486,7 +486,7 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
                 // Eye
                 if (result.material == 2)
                 {
-                    albedo = vec3(0.1,0.2,0.8);
+                    albedo = vec3(0.1,0.2,0.6);
                 }
 
                 float occ;
@@ -511,15 +511,16 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
                 vec3 sky = vec3(0.5,0.65,0.8)*2.0;
                 float diffuse = max(0.0, dot(N, L));
                 float spec = ggx(N, V, L, 3.0, fresnel);
-                float ss = max(0.0, Subsurface(result.hit, V, N));
+                float ss = max(0.2, Subsurface(result.hit, V, N));
 
-                diffuse = mix(diffuse, smoothstep(0.25, 0.9, pow(ss, 0.6)), 0.9);
-                color = ambient + albedo * diffuse + 2.0 * spec + fresnel * sky;
+                diffuse = mix(diffuse, smoothstep(0.25, 0.9, pow(ss, 0.6)), 0.97);
+                color = ambient + albedo * diffuse * 1.2 + 2.0 * spec + fresnel * sky;
                 color *= 0.5;
             }
         } else {
             // color = Sky(ray);
             color = vec3(.969, .906, .808);
+            color = NormalizeRGB(188, 245, 231);
         }
 
         return color;
@@ -572,12 +573,12 @@ Use **Up**, **Down**, **Left**, **Right** arrows for camera control.
         }
 
         // final color
-        float vignette = 1.55 / (1.1 + 1.1*dot(uv, uv));
+        float vignette = 1.21 / (1.1 + 1.1*dot(uv, uv));
         vignette *= vignette;
-        vignette = mix(1.0, smoothstep(0.1, 1.1, vignette), 0.45);
+        vignette = mix(1.0, smoothstep(0.1, 1.1, vignette), 0.25);
         color = vignette * color;
         color = filmic_reinhard(color);
-        color = smoothstep(-0.025, 1.55,color);
+        color = smoothstep(0.125, 1.41,color);
         // gamma correction
         color = pow(color, vec3(1.0/2.2));
         o_color = vec4(color, 1);
