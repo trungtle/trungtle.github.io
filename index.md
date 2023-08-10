@@ -3,19 +3,18 @@ layout: default
 title: Home
 ---
 
-<img width=58px src="{% link /assets/images/self_drawing.jpg %}" alt="self drawing" style="float: left; margin: 0px 15px 0px 0px;">
-My name is Trung Le. I'm a computer graphics engineer at Deviation Games, working on signed distance field rendering and dynamic GPU tessellation for an unannounced title.
-
-At Google [Stadia R&D](https://stadia.dev/) (shutdown in January, 2022), I worked on neural rendering research for fur rendering, and   released the [SyntheticFur dataset](https://github.com/google-research-datasets/synthetic-fur) in collaboration with Google Brain and Stadia. 
-
-At [Rockstar Games](https://www.rockstargames.com/), I worked as an AI engineer to optimize physics and animation performance for [Red Dead Redepmtion 2](https://www.rockstargames.com/reddeadredemption2/).
-
-
 [<i class="fas fa-envelope fa-lg icon"></i>](mailto:trungtuanle90@gmail.com)
 [<i class="fab fa-linkedin fa-lg icon"></i>](https://www.linkedin.com/in/trungtuanle/)
 [<i class="fab fa-github fa-lg icon"></i>](https://github.com/trungtle)
-[<i class="fab fa-twitter-square fa-lg icon"></i>](https://twitter.com/trungle90)
 [Resume <i class="fas fa-download fa-lg icon"></i>]({% link /assets/doc/Resume_TrungLe.pdf %})
+
+<img width=58px src="{% link /assets/images/self_drawing.jpg %}" alt="self drawing" style="float: left; margin: 0px 15px 0px 0px;">
+My name is Trung Le. I'm a computer graphics engineer at [Deviation Games](https://www.deviationgames.com/), working on custom rendering features in Unreal Engine, including signed distance field raymarching and GPU tessellation.
+
+At Google [Stadia R&D](https://stadia.dev/), I worked on neural rendering research for fur rendering, and   released the [SyntheticFur dataset](https://github.com/google-research-datasets/synthetic-fur) in collaboration with Google Brain and Stadia.
+
+At [Rockstar Games](https://www.rockstargames.com/), I worked as an AI engineer to optimize physics and animation performance for [Red Dead Redepmtion 2](https://www.rockstargames.com/reddeadredemption2/).
+
 
 
 <hr/>
@@ -31,11 +30,11 @@ Designed and implemented real-time signed distance field ray marching in Unreal 
 
 #### ML ENGINEER, GOOGLE STADIA - OCT 2019 - MAY 2021
 
-Advocated for and applied neural rendering research toward solving real-time graphics problems for video games. My focuses were AI art generation and high fidelity fur rendering. Worked on generating custom 3D datasets using Houdini and Blender, training generative machine learning models with Google infrastructure, parameter tuning, and interfacing novel workflows with artists. 
+Advocated for and applied neural rendering research toward solving real-time graphics problems for video games. My focuses were AI art generation and high fidelity fur rendering. Worked on generating custom 3D datasets using Houdini and Blender, training generative machine learning models with Google infrastructure, parameter tuning, and interfacing novel workflows with artists.
 
 #### AI PROGRAMMER, ROCKSTAR GAMES - 2017 - 2019
 
-Analyzed and optimized performance for AI systems in Red Dead Redemption II, Rockstar’s premier narrative-driven, open world video game title with deep AI interactions.  Specifically worked to improve  the C++ game code for LOD management of AI physics, weapon and combat systems, transport systems, and pathfinding systems for PS4 and XBox. Worked on general AI and animation optimization for several specific scripted in-game missions as well as miscellaneous performance bugs in the final weeks before release. 
+Analyzed and optimized performance for AI systems in Red Dead Redemption II, Rockstar’s premier narrative-driven, open world video game title with deep AI interactions.  Specifically worked to improve  the C++ game code for LOD management of AI physics, weapon and combat systems, transport systems, and pathfinding systems for PS4 and XBox. Worked on general AI and animation optimization for several specific scripted in-game missions as well as miscellaneous performance bugs in the final weeks before release.
 
 #### TOOLS PROGRAMMER INTERN, EPIC GAMES - 2016
 

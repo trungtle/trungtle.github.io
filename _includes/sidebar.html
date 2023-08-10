@@ -11,15 +11,15 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.url | relative_url }}">Home</a>
-
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
         `layout: page` in the front-matter. See readme for usage.
       {% endcomment %}
 
-      <a class="sidebar-nav-item" href="
-      {% link /assets/doc/Resume_TrungLe.pdf %}">Resume</a>
+      <a class="sidebar-nav-item" href="mailto:trungtuanle90@gmail.com"><i class="fas fa-envelope fa-sm icon"></i></i>Email</a>
+      <a class="sidebar-nav-item" href="https://www.linkedin.com/in/trungtuanle/"><i class="fab fa-linkedin fa-sm icon"></i></i>LinkedIn</a>
+      <a class="sidebar-nav-item" href="https://github.com/trungtle"><i class="fab fa-github fa-sm icon"></i></i>Github</a>
+      <a class="sidebar-nav-item" href="{% link /assets/doc/Resume_TrungLe.pdf %}"><i class="fas fa-download fa-sm icon"></i>Resume</a>
     </nav>
     <hr>
     <p>Projects</p>
