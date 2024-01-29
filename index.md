@@ -18,8 +18,6 @@ At Google [Stadia R&D](https://stadia.dev/), I worked on neural rendering resear
 
 At [Rockstar Games](https://www.rockstargames.com/), I worked as an AI engineer to optimize physics and animation performance for [Red Dead Redepmtion 2](https://www.rockstargames.com/reddeadredemption2/).
 
-I enjoy dabbling in digital painting and VFX using Houdini. The thing that got my so interested in graphics is its hybrid nature between technical code and aesthetic visuals.
-
 <hr/>
 ## Tech
 - **Proficient**: C/C++, GPU shader programming
