@@ -28,6 +28,15 @@ permalink:        pretty
 twitter_username: trungle90
 github_username:  trungtle
 
+projects:
+  - id: rendering
+  - id: webgl_renderer
+  - id: simulation
+  - id: vr_editor
+  - id: ml
+  - id: game_ideas
+  - id: digital_art
+
 github:
   repo:           https://github.com/trungtle/trungtle.github.io
 

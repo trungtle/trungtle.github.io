@@ -38,7 +38,3 @@ gem "kramdown-parser-gfm"
 
 
 gem "webrick", "~> 1.7"
-
-# Patch Liquid 4 for Ruby 3.2 #9248
-# https://github.com/jekyll/jekyll/pull/9248
-gem "liquid", "~> 4.0.4"
