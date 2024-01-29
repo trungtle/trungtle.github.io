@@ -26,11 +26,11 @@ At [Rockstar Games](https://www.rockstargames.com/), I worked as an AI engineer 
 - **Software**: Unreal, Unity, Houdini, Blender
 
 ## Work
-#### SERNIOR GRAPHICS ENGINEER, BAD ROBOT GAMES - JAN 2024 - Present
+#### SERNIOR GRAPHICS ENGINEER, [BAD ROBOT GAMES](https://www.badrobotgames.com/) - JAN 2024 - Present
 Graphics engineer on an unannounced title.
 
 
-#### GRAPHICS ENGINEER, DEVIATION - MAY 2021 - JAN 2024
+#### GRAPHICS ENGINEER, DEVIATION GAMES - MAY 2021 - JAN 2024
 Designed and implemented real-time signed distance field ray marching in Unreal 5.
 
 #### ML ENGINEER, GOOGLE STADIA - OCT 2019 - MAY 2021
