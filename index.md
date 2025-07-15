@@ -27,11 +27,10 @@ At [Rockstar Games](https://www.rockstargames.com/), I worked as an AI engineer 
 
 ## Work
 #### SERNIOR GRAPHICS ENGINEER, [BAD ROBOT GAMES](https://www.badrobotgames.com/) - JAN 2024 - Present
-Graphics engineer on an unannounced title.
-
+Led graphics engineering efforts as sole graphics engineer. Worked closely with tech art, lighting, and VFX teams to provide support, knowledge sharing, and building custom tooling structures — notably a networked modular lighting system for dynamic time of day and weathers. Managed performance optimization targeting 60FPS across console and PC platforms, focusing on GPU and memory usage. Coordinated with QAs, principal engineers, and automation team to establish performance workflows.
 
 #### GRAPHICS ENGINEER, [DEVIATION GAMES](https://www.deviationgames.com/) - MAY 2021 - JAN 2024
-Worked on various rendering features in Unreal Engine 5, such as real-time signed distance field ray marching, portal rendering, and GPU tessellation.
+Implemented real-time signed distance field ray marching for animated characters in Unreal. This feature uses skinned point clouds as an underlying data structure. Collaborated with the R&D team and gameplay engineers to integrate for enemy combat system. Worked on various rendering features, including portal rendering and GPU tessellation.
 
 #### ML ENGINEER, GOOGLE STADIA - OCT 2019 - MAY 2021
 
