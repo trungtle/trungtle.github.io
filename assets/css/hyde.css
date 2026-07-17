@@ -35,9 +35,18 @@ html {
   font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
 }
 
-/* Paragraph body text uses a serif for readability */
+/* Paragraph body text uses a serif for readability, justified with
+ * automatic hyphenation so both edges align cleanly without large gaps. */
 p {
   font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  text-align: justify;
+}
+
+/* Keep the sidebar's short lines left-aligned (justify only helps
+ * multi-line running text). */
+.sidebar p {
+  text-align: inherit;
+  hyphens: manual;
 }
 
 /* Sidebar uses its own sans-serif, independent of body/heading fonts */
@@ -153,27 +162,45 @@ a.sidebar-nav-item-sub:focus {
 
 /* Container
  *
- * Align the contents of the site above the proper threshold with some margin-fu
- * with a 25%-wide `.sidebar`.
+ * On mobile the sidebar stacks on top and the content is a centered,
+ * padded column (via `.container`). On tablets and up the sidebar is fixed
+ * to the left, so we reserve its width with `padding-left` and let the
+ * content column center itself in the remaining space with equal margins
+ * (`margin: auto`, inherited from `.container`).
  */
 
 .content {
-  padding-top:    4rem;
+  padding-top:    3rem;
   padding-bottom: 4rem;
 }
 
+/* Tablet and up: the sidebar is fixed at 18rem, so reserve that space with
+ * padding-left and let the text column center itself in the area that remains,
+ * with equal margins (auto). `box-sizing: border-box` keeps the padding inside
+ * the full-width box. Column is capped at a comfortable ~40rem measure. */
 @media (min-width: 48em) {
   .content {
-    max-width: 38rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-left:  20rem;  /* 18rem fixed sidebar + 2rem gutter */
+    padding-right: 2rem;
+  }
+  .content-inner {
+    max-width: 50rem;
+    margin-left:  auto;
+    margin-right: auto;
   }
 }
 
-@media (min-width: 64em) {
+/* Wide screens: once there is genuinely room to spare (≥ 20rem sidebar-reserve
+ * + 40rem column + 20rem mirror = 80rem, plus headroom), mirror the reserved
+ * width on the right so the column reads as centered in the whole viewport
+ * rather than centered only in the space beside the sidebar. */
+@media (min-width: 88em) {
   .content {
-    margin-left: 42rem;
-    margin-right: 4rem;
+    padding-right: 20rem;
   }
 }
 
