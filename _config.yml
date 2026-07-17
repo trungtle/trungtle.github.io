@@ -30,7 +30,6 @@ github_username:  trungtle
 
 projects:
   - id: rendering
-  - id: webgl_renderer
   - id: simulation
   - id: vr_editor
   - id: ml
