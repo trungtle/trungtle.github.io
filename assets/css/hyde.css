@@ -32,7 +32,18 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+}
+
+/* Paragraph body text uses a serif for readability */
+p {
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+}
+
+/* Sidebar uses its own sans-serif, independent of body/heading fonts */
+.sidebar,
+.sidebar p {
+  font-family: "Nunito Sans", "PT Sans", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -89,7 +100,7 @@ a .icon {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Roboto Slab", serif;
+  font-family: "Nunito Sans", "PT Sans", Helvetica, Arial, sans-serif;
   font-size: 1.35rem;
 }
 
