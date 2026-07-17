@@ -18,7 +18,8 @@ At Google [Stadia R&D](https://stadia.dev/), I worked on neural rendering resear
 
 At [Rockstar Games](https://www.rockstargames.com/), I worked as an AI engineer to optimize physics and animation performance for [Red Dead Redepmtion 2](https://www.rockstargames.com/reddeadredemption2/).
 
-<hr/>
+<div class="resume-box" markdown="1">
+
 ## Tech
 - **Proficient**: C/C++, GPU shader programming
 - **Secondary**: Rust, Python, C#, Javascript
@@ -56,6 +57,8 @@ Designed a GUI with Python QT for the systems used in Wireless Resonant Energy L
 
 - **University of Pennsylvania, Philadelphia PA — MSE Computer Graphics**, 2017
 - **University of Washington, Seattle WA — BS Electrical Engineering**, 2012
+
+</div>
 
 
 

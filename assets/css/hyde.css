@@ -35,24 +35,59 @@ html {
   font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
 }
 
-/* Paragraph body text uses a serif for readability, justified with
- * automatic hyphenation so both edges align cleanly without large gaps. */
+/* Paragraph body text uses a serif for readability, justified so both
+ * edges align cleanly. */
 p {
   font-family: "Merriweather", Georgia, "Times New Roman", serif;
   text-align: justify;
 }
 
-/* Keep the sidebar's short lines left-aligned (justify only helps
- * multi-line running text). */
-.sidebar p {
-  text-align: inherit;
-  hyphens: manual;
+/* Standardize heading rhythm: more space *before* a heading than after it,
+ * scaling with hierarchy, so sections read as visually grouped with the
+ * content that follows rather than evenly spaced from everything. */
+.content-inner h2 {
+  margin-top: 2.5rem;
+  margin-bottom: .75rem;
+}
+.content-inner h3 {
+  margin-top: 1.75rem;
+  margin-bottom: .5rem;
+}
+.content-inner h4,
+.content-inner h5,
+.content-inner h6 {
+  margin-top: 1.25rem;
+  margin-bottom: .5rem;
+}
+/* First heading in the column shouldn't have a large gap above it */
+.content-inner > h2:first-child,
+.content-inner > h3:first-child {
+  margin-top: 0;
 }
 
-/* Sidebar uses its own sans-serif, independent of body/heading fonts */
+/* Resume box: groups the Tech / Work / Education sections into a single
+ * light-bordered card that sets them apart from the intro above. */
+.resume-box {
+  margin-top: 2rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+/* The box's own padding provides the top spacing, so drop the leading
+ * heading's margin to keep it snug against the top edge. */
+.resume-box > h2:first-child {
+  margin-top: 0;
+}
+
+/* Sidebar uses its own sans-serif; its short lines stay left-aligned
+ * (justify only helps multi-line running text). */
 .sidebar,
 .sidebar p {
   font-family: "Nunito Sans", "PT Sans", Helvetica, Arial, sans-serif;
+}
+.sidebar p {
+  text-align: left;
 }
 @media (min-width: 48em) {
   html {
@@ -177,7 +212,8 @@ a.sidebar-nav-item-sub:focus {
 /* Tablet and up: the sidebar is fixed at 18rem, so reserve that space with
  * padding-left and let the text column center itself in the area that remains,
  * with equal margins (auto). `box-sizing: border-box` keeps the padding inside
- * the full-width box. Column is capped at a comfortable ~40rem measure. */
+ * the full-width box. Column is capped at ~34rem so lines stay in the readable
+ * 60-75 characters-per-line range. */
 @media (min-width: 48em) {
   .content {
     box-sizing: border-box;
