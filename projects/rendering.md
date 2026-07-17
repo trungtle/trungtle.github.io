@@ -72,6 +72,21 @@ A personal ray tracer implementation mainly for studying path tracing techniques
 
 A WebGL renderer built in my graduate study.
 
-[Live Version](http://www.trungtuanle.com/Project5-WebGL-Deferred-Shading-with-glTF/)
+[Open in a new tab <i class="fas fa-external-link-alt fa-sm icon"></i>](http://www.trungtuanle.com/Project5-WebGL-Deferred-Shading-with-glTF/)
 
-<img src="https://github.com/trungtle/Project5-WebGL-Deferred-Shading-with-glTF/raw/master/img/100_lights.gif" alt="WebGL renderer">
+<div class="demo-embed" id="webgl-demo-embed">
+  <img class="demo-embed-thumb" src="https://github.com/trungtle/Project5-WebGL-Deferred-Shading-with-glTF/raw/master/img/100_lights.gif" alt="WebGL renderer preview">
+  <button type="button" class="demo-embed-play" onclick="
+    var box = document.getElementById('webgl-demo-embed');
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.trungtuanle.com/Project5-WebGL-Deferred-Shading-with-glTF/';
+    iframe.title = 'WebGL deferred renderer — live demo';
+    iframe.loading = 'lazy';
+    iframe.allow = 'fullscreen';
+    box.innerHTML = '';
+    box.appendChild(iframe);
+  ">
+    <i class="fas fa-play"></i> Run live demo
+  </button>
+</div>
+<p class="demo-embed-note">Runs the live WebGL build in place — requires a browser with WebGL support. Best on desktop; may be slow on mobile devices.</p>

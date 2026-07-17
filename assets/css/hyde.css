@@ -287,6 +287,69 @@ a.sidebar-nav-item-sub:focus {
 
 
 /*
+ * Demo embed
+ *
+ * Click-to-load embed for live in-page demos (e.g. WebGL apps). Shows a
+ * static thumbnail with a play button until clicked, so heavy content
+ * (shaders, textures) only loads if the visitor opts in.
+ */
+.demo-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #111;
+  margin-bottom: .5rem;
+}
+.demo-embed-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+  object-fit: cover;
+}
+.demo-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.demo-embed-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem 1.1rem;
+  border: 0;
+  border-radius: 2rem;
+  background-color: rgba(0, 0, 0, .65);
+  color: #fff;
+  font-family: "Nunito Sans", "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .15s ease;
+}
+.demo-embed-play:hover,
+.demo-embed-play:focus {
+  background-color: Mediumslateblue;
+}
+.demo-embed-note {
+  font-size: .8rem;
+  color: #9a9a9a;
+}
+
+
+/*
  * Portfolio gallery
  *
  * Responsive image grid with captions, used on project pages to present
