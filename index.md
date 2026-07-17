@@ -10,7 +10,7 @@ title: Home
 
 <img width=58px src="{% link /assets/images/self_drawing.jpg %}" alt="self drawing" style="float: left; margin: 0px 15px 0px 0px;">
 
-Hi there! I'm a graphics programmer at [Bad Robot Games](https://www.badrobotgames.com/), working on rendering performance and features for a new unannounced title at the studio.
+Hi there! I'm a graphics programmer at [Bad Robot Games](https://www.badrobotgames.com/), working on rendering performance and features for for [4:LOOP](https://www.play4loop.com/).
 
 Previously, at [Deviation Games](https://www.deviationgames.com/), I worked on custom rendering features in Unreal Engine 5, such as signed distance field raymarching, portal rendering, and GPU tessellation.
 
