@@ -34,6 +34,10 @@ pipelines with filmic tone mapping.
     <figcaption>Sponza — PBR materials, image-based ambient lighting, and filmic tone mapping.</figcaption>
   </figure>
   <figure>
+    <img src="/assets/images/vulkan_rasterizer/bistro_1.png" alt="Amazon Lumberyard Bistro exterior scene rendered in Smoke Engine">
+    <figcaption>Bistro — exterior street scene with PBR materials and image-based lighting.</figcaption>
+  </figure>
+  <figure>
     <img src="/assets/images/vulkan_rasterizer/helmet_papermill.png" alt="Sci-fi helmet lit by a sunlit ruins HDR environment">
     <figcaption>Helmet under an outdoor HDR environment — image-based specular and sun bloom.</figcaption>
   </figure>
@@ -48,6 +52,7 @@ pipelines with filmic tone mapping.
 <em>Sponza</em> — original model by Marko Dabrovic (2002), improved version by Frank Meinl / Crytek, with a PBR texture pack via <a href="https://www.alexandre-pestana.com/pbr-textures-sponza/">alexandre-pestana.com</a>.
 <em>Battle Damaged Sci-fi Helmet — PBR</em> by <a href="https://sketchfab.com/theblueturtle_">theblueturtle_</a> (<a href="https://sketchfab.com/models/b81008d513954189a063ff901f7abfe4">Sketchfab</a>), published under a Creative Commons Attribution-NonCommercial license.
 Both distributed via the <a href="https://github.com/KhronosGroup/glTF-Sample-Models">Khronos glTF Sample Models</a> collection.
+<em>Amazon Lumberyard Bistro</em> — courtesy of Amazon Lumberyard, via the <a href="https://developer.nvidia.com/orca/amazon-lumberyard-bistro">NVIDIA Open Research Content Archive (ORCA)</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
 </p>
 
 
