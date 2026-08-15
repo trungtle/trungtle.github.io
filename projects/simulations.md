@@ -4,7 +4,7 @@ id: simulation
 title: 🌊 Simulations
 ---
 
-## SPH Fluide Solver
+## SPH Fluid Solver
 
 [**Repo** <i class="fab fa-github fa-lg icon"></i>](https://github.com/trungtle/KorraFluidSolver)
 

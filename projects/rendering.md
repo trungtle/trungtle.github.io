@@ -62,7 +62,7 @@ Both distributed via the <a href="https://github.com/KhronosGroup/glTF-Sample-Mo
 
 [**Repo** <i class="fab fa-github fa-lg icon"></i>](https://github.com/trungtle/Ray-tracer)
 
-A personal ray tracer implementation mainly for studying path tracing techniques on my own. Implementation is based on [@Peter_shirley](https://twitter.com/Peter_shirley)'s [Ray Tracing in One Weeken](https://raytracing.github.io/) (a very fun series, I highly recommend!) and [PBRT](https://pbrt.org/).
+A personal ray tracer implementation mainly for studying path tracing techniques on my own. Implementation is based on [@Peter_shirley](https://twitter.com/Peter_shirley)'s [Ray Tracing in One Weekend](https://raytracing.github.io/) (a very fun series, I highly recommend!) and [PBRT](https://pbrt.org/).
 
 <img src="https://github.com/trungtle/Ray-tracer/raw/master/images/checker_texture.png" alt="Ray traced spheres">
 

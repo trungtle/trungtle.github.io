@@ -8,7 +8,7 @@ Here are a collection of game ideas that I tinker with over the years.
 
 ## Shires
 
-A 2-person board game that blends between tradition chess and capture-the-flag. The objective of the game is to move your units through various portals and capture your opponent's zone.
+A 2-person board game that blends between traditional chess and capture-the-flag. The objective of the game is to move your units through various portals and capture your opponent's zone.
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DY3OcfuWLh8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -26,7 +26,7 @@ There are five zones, or shires:
     - Teal shire: this represents the River. River grants Lord the ability to attack.
     - Purple shire: this represents the Valley. Valley converts Lord's movement to a Knight.
 
-At the center of each shire is the capture tile. In order to capture a shire, a Lord unit must land on this tile. Capturing netraul shires gives a player different bonuses, but capturing the opponent's shire is the final objective. Neutral shire can be recaptured and the bonus would transfer to the player who currently controls that shire. The board contains destructable rocks in grey. Destructable rocks can only be destroyed by a Rook. Once destroyed, destructable rocks will respawn after several turns. To travel from one shire to the other, the unit needs to enter a portal. The links between portals are indicated by the text on the portal. Unit can't immediately re-enter portals, meaning the have to make a move within the same shire before reentering the portal again.
+At the center of each shire is the capture tile. In order to capture a shire, a Lord unit must land on this tile. Capturing neutral shires gives a player different bonuses, but capturing the opponent's shire is the final objective. Neutral shire can be recaptured and the bonus would transfer to the player who currently controls that shire. The board contains destructible rocks in grey. Destructible rocks can only be destroyed by a Rook. Once destroyed, destructible rocks will respawn after several turns. To travel from one shire to the other, the unit needs to enter a portal. The links between portals are indicated by the text on the portal. Unit can't immediately re-enter portals, meaning they have to make a move within the same shire before reentering the portal again.
 
 ### Units
 

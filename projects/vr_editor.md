@@ -4,7 +4,7 @@ id: vr_editor
 title: 🏔️ Unreal VR Editor
 ---
 
-The folllowing are my work during an internship with Epic Games under the supervision of [Mike Fricker](https://twitter.com/mike_fricker)
+The following is my work during an internship with Epic Games under the supervision of [Mike Fricker](https://twitter.com/mike_fricker)
 
 ## [Foliage Painting (Unreal 4.13 release)](https://docs.unrealengine.com/4.26/en-US/WhatsNew/Builds/ReleaseNotes/2016/4_13/)
 
@@ -49,7 +49,7 @@ As it sounds like! This mode allows user to type as if playing on a drumset. Thi
 
 #### Dual-pronged drum
     
-An extension of single-pronged drum mode. The reasoning for this is that a typist can learn to perfect typing with for than a single stick per hand by practicing on wrist rotation.
+An extension of single-pronged drum mode. The reasoning for this is that a typist can learn to perfect typing with more than a single stick per hand by practicing on wrist rotation.
 
 
 #### Flat projection

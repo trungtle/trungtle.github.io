@@ -10,13 +10,13 @@ title: Home
 
 <img width=58px src="{% link /assets/images/self_drawing.jpg %}" alt="self drawing" style="float: left; margin: 0px 15px 0px 0px;">
 
-Hi there! I'm a graphics programmer at [Bad Robot Games](https://www.badrobotgames.com/), working on rendering performance and features for for [4:LOOP](https://www.play4loop.com/).
+Hi there! I'm a graphics programmer at [Bad Robot Games](https://www.badrobotgames.com/), working on rendering performance and features for [4:LOOP](https://www.play4loop.com/).
 
 Previously, at [Deviation Games](https://www.deviationgames.com/), I worked on custom rendering features in Unreal Engine 5, such as signed distance field raymarching, portal rendering, and GPU tessellation.
 
 At Google [Stadia R&D](https://stadia.dev/), I worked on neural rendering research for fur rendering, and   released the [SyntheticFur dataset](https://github.com/google-research-datasets/synthetic-fur) in collaboration with Google Brain and Stadia.
 
-At [Rockstar Games](https://www.rockstargames.com/), I worked as an AI engineer to optimize physics and animation performance for [Red Dead Redepmtion 2](https://www.rockstargames.com/reddeadredemption2/).
+At [Rockstar Games](https://www.rockstargames.com/), I worked as an AI engineer to optimize physics and animation performance for [Red Dead Redemption 2](https://www.rockstargames.com/reddeadredemption2/).
 
 <div class="resume-box" markdown="1">
 
@@ -27,7 +27,7 @@ At [Rockstar Games](https://www.rockstargames.com/), I worked as an AI engineer 
 - **Software**: Unreal, Unity, Houdini, Blender
 
 ## Work
-#### SERNIOR GRAPHICS ENGINEER, [BAD ROBOT GAMES](https://www.badrobotgames.com/) - JAN 2024 - Present
+#### SENIOR GRAPHICS ENGINEER, [BAD ROBOT GAMES](https://www.badrobotgames.com/) - JAN 2024 - Present
 Established technical direction for all real-time graphics systems to deliver custom rendering features and optimize GPU performance targeting 60FPS, addressing stalls, hitches, shader compilation, crashes, and budget assets size to fit in memory on different PCs specs and PS5. Provided consistent, on time and high quality cross-functional support for tech arts, lighting, VFX, and QA teams as I worked carefully to understand their needs and requirements. Designed and built a networked modular lighting system to support dynamic time of day, weather, and post processing effects to enhance the game visual experience. Trained QA and engineers to understand performance considerations for real-time needs, and to be able to package and profile the game on target platforms, with the goal to align the team’s mindset to be performance first. Coordinated with animation engineers to establish scalable performance regression workflows and used Claude Code to develop artist-friendly dashboard for in-game memory report viewer.
 
 #### GRAPHICS ENGINEER, [DEVIATION GAMES](https://www.deviationgames.com/) - MAY 2021 - JAN 2024
@@ -39,7 +39,7 @@ Advocated for and applied neural rendering research toward solving real-time gra
 
 #### AI PROGRAMMER, [ROCKSTAR GAMES](https://www.rockstargames.com/) - 2017 - 2019
 
-Analyzed and optimized performance for AI systems in Red Dead Redemption II, Rockstar’s premier narrative-driven, open world video game title with deep AI interactions.  Specifically worked to improve  the C++ game code for LOD management of AI physics, weapon and combat systems, transport systems, and pathfinding systems for PS4 and XBox. Worked on general AI and animation optimization for several specific scripted in-game missions as well as miscellaneous performance bugs in the final weeks before release.
+Analyzed and optimized performance for AI systems in Red Dead Redemption II, Rockstar’s premier narrative-driven, open world video game title with deep AI interactions.  Specifically worked to improve  the C++ game code for LOD management of AI physics, weapon and combat systems, transport systems, and pathfinding systems for PS4 and Xbox. Worked on general AI and animation optimization for several specific scripted in-game missions as well as miscellaneous performance bugs in the final weeks before release.
 
 #### TOOLS PROGRAMMER INTERN, EPIC GAMES - 2016
 
