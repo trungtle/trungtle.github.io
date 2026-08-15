@@ -30,19 +30,19 @@ pipelines with filmic tone mapping.
 
 <div class="gallery gallery-lead">
   <figure>
-    <img src="/assets/images/vulkan_rasterizer/sponza_pbr.png" alt="Sponza rendered with PBR materials, image-based ambient lighting, and filmic tone mapping in Smoke Engine">
+    <img src="/assets/images/vulkan_rasterizer/sponza_pbr.png" alt="Sponza rendered with PBR materials, image-based ambient lighting, and filmic tone mapping in Smoke Engine" loading="lazy">
     <figcaption>Sponza — PBR materials, image-based ambient lighting, and filmic tone mapping.</figcaption>
   </figure>
   <figure>
-    <img src="/assets/images/vulkan_rasterizer/bistro_1.png" alt="Amazon Lumberyard Bistro exterior scene rendered in Smoke Engine">
+    <img src="/assets/images/vulkan_rasterizer/bistro_1.png" alt="Amazon Lumberyard Bistro exterior scene rendered in Smoke Engine" loading="lazy">
     <figcaption>Bistro — exterior street scene with PBR materials and image-based lighting.</figcaption>
   </figure>
   <figure>
-    <img src="/assets/images/vulkan_rasterizer/helmet_papermill.png" alt="Sci-fi helmet lit by a sunlit ruins HDR environment">
+    <img src="/assets/images/vulkan_rasterizer/helmet_papermill.png" alt="Sci-fi helmet lit by a sunlit ruins HDR environment" loading="lazy">
     <figcaption>Helmet under an outdoor HDR environment — image-based specular and sun bloom.</figcaption>
   </figure>
   <figure>
-    <img src="/assets/images/vulkan_rasterizer/helmet_turntable.gif" alt="Battle-damaged sci-fi helmet turntable showing emissive HUD and PBR metal">
+    <img src="/assets/images/vulkan_rasterizer/helmet_turntable.gif" alt="Battle-damaged sci-fi helmet turntable showing emissive HUD and PBR metal" loading="lazy">
     <figcaption>Damaged helmet turntable — emissive HUD detail and metallic-roughness surfaces.</figcaption>
   </figure>
 </div>
