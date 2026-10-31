@@ -35,6 +35,7 @@ projects:
   - id: ml
   - id: game_ideas
   - id: digital_art
+  - id: graphics_engineer_demo
 
 github:
   repo:           https://github.com/trungtle/trungtle.github.io
