@@ -75,7 +75,7 @@ A personal ray tracer implementation mainly for studying path tracing techniques
   <button type="button" class="demo-embed-play" onclick="
     var box = document.getElementById('lightlab-render-embed');
     var iframe = document.createElement('iframe');
-    iframe.src = 'https://www.trungtuanle.com/graphics-engineer-demo/?view=render';
+    iframe.src = 'https://www.trungtuanle.com/graphics-engineer-demo/?view=render&v=dragon';
     iframe.title = 'Light Lab path tracer: live render';
     iframe.loading = 'lazy';
     box.innerHTML = '';
