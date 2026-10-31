@@ -68,7 +68,7 @@ A personal ray tracer implementation mainly for studying path tracing techniques
 
 <img src="https://raw.githubusercontent.com/trungtle/Ray-tracer/master/images/cornellbox_800.png" alt ="Assorted ray traced objects">
 
-**Real-time path tracing in WebGL2.** The renderer from my [Light Lab]({% link projects/graphics_engineer_demo.md %}) career fair demo, path tracing a glass Stanford dragon under three colored lights in the browser.
+**Real-time path tracing in WebGL2.** The renderer from my [Light Lab]({% link projects/graphics_engineer_demo.md %}) career fair demo, path tracing a glass Stanford dragon under three colored lights.
 
 <img src="{% link /assets/images/graphics_engineer_demo/light_lab_render.jpg %}" alt="Path-traced glass Stanford dragon in a Cornell box lit by three ceiling lights" loading="lazy">
 
