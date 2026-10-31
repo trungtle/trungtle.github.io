@@ -502,8 +502,8 @@ a.sidebar-nav-item-sub:focus {
 /* Embedded interactive demo (needs more height than a video) */
 .demo-container {
   position: relative;
-  height: 80vh;
-  min-height: 560px;
+  /* taller than wide, so the app stacks its panel under the picture */
+  aspect-ratio: 3 / 4;
   margin-bottom: 1rem;
 }
 
@@ -514,4 +514,24 @@ a.sidebar-nav-item-sub:focus {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.demo-actions {
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+/* Poster and running demo share the app's page color, so letterboxing is invisible */
+.demo-container {
+  background-color: #f5f6fa;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.demo-container .demo-embed-thumb {
+  object-fit: contain;
+}
+
+.demo-actions a + a {
+  margin-left: 1.5rem;
 }
