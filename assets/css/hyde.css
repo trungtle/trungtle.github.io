@@ -532,6 +532,68 @@ a.sidebar-nav-item-sub:focus {
   object-fit: contain;
 }
 
+/* Screenshot carousel (scroll-snap; buttons step one slide) */
+.carousel {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: 5px;
+  background-color: #222;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  /* centered on the image, ignoring the caption below it */
+  top: calc(50% - 1rem);
+  transform: translateY(-50%);
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  cursor: pointer;
+}
+
+.carousel-btn:hover,
+.carousel-btn:focus-visible {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-prev { left: 0.5rem; }
+.carousel-next { right: 0.5rem; }
+
+.carousel-caption {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+  color: #717171;
+}
+
 .demo-actions a + a {
   margin-left: 1.5rem;
 }

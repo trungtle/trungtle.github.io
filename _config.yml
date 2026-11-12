@@ -36,6 +36,7 @@ projects:
   - id: game_ideas
   - id: digital_art
   - id: graphics_engineer_demo
+  - id: memreport
 
 github:
   repo:           https://github.com/trungtle/trungtle.github.io
